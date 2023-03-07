@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<%- include('./partials/header'); %>
+  
+  <body>
+    <%- include('./partials/navbar'); %>
+
+    <div class="container">
+      <h2>Todos:</h2>
+      <% for(var i=0; i < todos.length; i++) { %>
+        <p><%= todos[i].title %> - <%= todos[i].completed %></p>
+      <% } %>
+
+    </div>
+
+
+    <%- include('./partials/scripts'); %>
+
+  </body>
+</html>

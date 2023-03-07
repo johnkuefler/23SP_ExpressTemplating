@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<%- include('./partials/header'); %>
+  
+  <body>
+    <%- include('./partials/navbar'); %>
+
+    <div class="container">
+     <h1><%=title%></h1>
+     <p><%=author%></p>
+     <p><%=content%></p>
+
+     <% if (hasPhd == true) { %>
+     <p>This person has a PHD</p>
+     <% } else { %>
+     <p>This person does not have a PHD</p>
+     <% } %>
+    </div>
+
+
+    <%- include('./partials/scripts'); %>
+
+  </body>
+</html>

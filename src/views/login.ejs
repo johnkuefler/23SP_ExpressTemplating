@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<%- include('./partials/header'); %>
+  
+  <body>
+
+   <div class="container">
+    <div class="row">
+      <div class="col-md-4 offset-md-4">
+        <div class="card">
+          <div class="card-header">
+            <i class="fas fa-lock"></i> Login
+          </div>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" class="form-control" id="username" placeholder="Enter username">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="remember">
+                <label class="form-check-label" for="remember">Remember me</label>
+              </div>
+              <a href="/" class="btn btn-block">Login</a>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <%- include('./partials/scripts'); %>
+
+  </body>
+</html>
