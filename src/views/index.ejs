@@ -5,17 +5,11 @@
   <body>
     <%- include('./partials/navbar'); %>
 
-    <div class="container">
-     <h1><%=title%></h1>
-     <p><%=author%></p>
-     <p><%=content%></p>
+   <form method="POST" action="/todos">
+      <input type="text" name="content"/>
+      <input type="submit" value="Create Todo"/>
+    </form>
 
-     <% if (hasPhd == true) { %>
-     <p>This person has a PHD</p>
-     <% } else { %>
-     <p>This person does not have a PHD</p>
-     <% } %>
-    </div>
 
 
     <%- include('./partials/scripts'); %>
