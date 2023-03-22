@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<%- include('./partials/header'); %>
+  
+  <body>
+    <%- include('./partials/navbar'); %>
+
+    <div class="container">
+    <form method="post" action="/advanced-form">
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-3">
+          <label for="first-name">First Name</label>
+          <input type="text" class="form-control" id="first-name" maxlength="20" name="firstName">
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label for="last-name">Last Name</label>
+          <input type="text" class="form-control" id="last-name" maxlength="20" name="lastName">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-3">
+          <label for="email">Email</label>
+          <input type="email" class="form-control" id="email" name="email">
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label for="password">Password</label>
+          <input type="password" class="form-control" id="password" name="password">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-3">
+          <label for="phone-number">Phone Number</label>
+          <input type="tel" class="form-control" id="phone-number" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" name="phoneNumber">
+        </div>
+        <div class="form-group col-md-6 mb-3">
+          <label for="phone-number-type">Phone Number Type</label><br>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="phoneNumberType" id="home" value="home">
+            <label class="form-check-label" for="home">Home</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="phoneNumberType" id="cell" value="cell">
+            <label class="form-check-label" for="cell">Cell</label>
+          </div>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group col-md-6 mb-3">
+          <label for="academic-year">Academic Year</label>
+          <select id="academic-year" class="form-control" name="academicYear">
+            <option value="freshman">Freshman</option>
+            <option value="sophomore">Sophomore</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="terms-and-conditions" name="agreeToTerms">
+        <label class="form-check-label" for="terms-and-conditions">I agree to terms and conditions</label>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">Submit</button>
+    </form>
+
+    </div>
+
+    <%- include('./partials/scripts'); %>
+
+
+  </body>
+</html>
