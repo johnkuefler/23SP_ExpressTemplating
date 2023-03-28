@@ -7,8 +7,8 @@ router.get('/', function (req, res, next) {
   res.render('index');
 });
 
-router.post('/', function (req, res, next) {
-  formController.form_post(req, res);
+router.post('/', async function (req, res, next) {
+  await formController.form_post(req, res);
 });
 
 router.get('/advanced-form', function (req, res, next) {

@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const mongoose = require('mongoose');
 
 var indexRouter = require('./routes/index');
 var loginRouter = require('./routes/login');
@@ -10,6 +11,8 @@ var patientsRouter = require('./routes/patients');
 var todosRouter = require('./routes/todos');
 
 var app = express();
+
+mongoose.connect('');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
