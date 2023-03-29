@@ -12,7 +12,10 @@ var todosRouter = require('./routes/todos');
 
 var app = express();
 
-mongoose.connect('');
+require('dotenv').config({ path: __dirname + '/.env' });
+
+//connectDb();
+async () => mongoose.connect(process.env['DATABASE']);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
